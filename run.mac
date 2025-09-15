@@ -1,0 +1,13 @@
+/process/em/verbose 0
+/process/had/verbose 0
+
+/geometry/source detector.tg
+
+/run/initialize
+
+/control/execute g113keV.mac
+
+/analysis/setFileName g113keV.root
+
+/run/verbose 1
+/run/beamOn 100000
