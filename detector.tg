@@ -10,6 +10,6 @@
 :rotm r000 0 0 0
 :rotm rx45 45 0 0
 
-:place phantom 1 room r000 0 0 0
-:place HPGe(S) 2 room rx45 0 6*cm 6*cm
+:place phantom -1 room r000 0 0 0
+:place HPGe(S) 2 room rx45 0 12*cm 12*cm
 
