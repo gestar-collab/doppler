@@ -1,12 +1,3 @@
-/process/em/verbose 0
-/process/had/verbose 0
-
-/geometry/source detector.tg
-
-/run/initialize
-
-/control/execute g113keV.mac
-
 /vis/open
 /vis/drawVolume
 
@@ -15,10 +6,8 @@
 /vis/viewer/set/auxiliaryEdge 1
 /vis/viewer/set/lineSegmentsPerCircle 30
 
-/vis/scene/add/gps
 /vis/scene/add/hits
 /vis/scene/add/axes
 /vis/scene/add/trajectories
 /vis/scene/endOfEventAction accumulate
 
-/run/beamOn 10

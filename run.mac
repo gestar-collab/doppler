@@ -5,9 +5,21 @@
 
 /run/initialize
 
-/control/execute g113keV.mac
+/gps/particle gamma
+/gps/energy 113 keV
+/gps/position 0 0 -150 mm
+/gps/ang/type iso
+# beam spot: 1 mm / source location: 150 mm
+/gps/ang/maxtheta 0.007 rad
+/gps/direction 0 0 1
+
+/control/ifInteractive vis.mac
 
 /analysis/setFileName g113keV.root
 
 /run/verbose 1
-/run/beamOn 100000
+/random/setSeeds 1234 82357 12374 14763 5479
+/run/printProgress 1000000
+
+/control/doifInteractive /run/beamOn 10
+/control/doifBatch /run/beamOn 100000000
