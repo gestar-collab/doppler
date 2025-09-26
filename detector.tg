@@ -1,7 +1,7 @@
 :volu world BOX 200 200 200 G4_Galactic
 :vis world OFF
 
-:volu room BOX 100 100 100 G4_AIR
+:volu room BOX 180 180 180 G4_AIR
 :vis room OFF
 
 :volu phantom ORB 5*cm G4_WATER
@@ -10,7 +10,7 @@
 :volu HPGe(S) TUBE 0 3*cm 2*cm G4_Ge
 :color HPGe(S) 0.5 0.5 0.5
 
-:volu collimator TUBE 2 9*cm 4*cm G4_Pb
+:volu collimator TUBE 1 9*cm 4*cm G4_Pb
 :color collimator 0.3 0.3 0.3
 
 :rotm r000 0 0 0

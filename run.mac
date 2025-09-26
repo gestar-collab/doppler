@@ -5,6 +5,8 @@
 
 /run/initialize
 
+/geometry/test/run
+
 /gps/particle gamma
 /gps/energy 113 keV
 /gps/position 0 0 -150 mm
@@ -22,4 +24,4 @@
 /run/printProgress 1000000
 
 /control/doifInteractive /run/beamOn 10
-/control/doifBatch /run/beamOn 100000000
+/control/doifBatch /run/beamOn 10000000
