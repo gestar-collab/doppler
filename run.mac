@@ -1,7 +1,7 @@
 /process/em/verbose 0
 /process/had/verbose 0
 
-/geometry/source detector.tg
+/geometry/source chest.tg
 
 /run/initialize
 
