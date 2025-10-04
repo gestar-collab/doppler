@@ -1,14 +1,14 @@
-:volu world BOX 200 200 200 G4_Galactic
+:volu world BOX 310 310 310 G4_Galactic
 :vis world OFF
 
-:volu room BOX 180 180 180 G4_AIR
+:volu room BOX 300 300 300 G4_AIR
 :vis room OFF
 
-:volu chest ELLIPTICALTUBE 180 106 100 G4_MUSCLE_STRIATED_ICRU
-:color chest 0 0.1 0.9
+:volu chest(S) ELLIPTICALTUBE 180 106 100 G4_MUSCLE_STRIATED_ICRU
+:color chest(S) 0 0.1 0.9
 
-:volu ribs ELLIPTICALTUBE 170 96 100 G4_BONE_COMPACT_ICRU
-:color ribs 0.3 0.3 0.3
+:volu ribs(S) ELLIPTICALTUBE 170 96 100 G4_BONE_COMPACT_ICRU
+:color ribs(S) 0.3 0.3 0.3
 
 :mixt_by_natoms G4_LUNG 0.3 9
   H 105
@@ -20,20 +20,18 @@
   S   2
  Cl   3
   K   2
-:volu lung ELLIPTICALTUBE 160 86 100 G4_LUNG
-:color lung 0.9 0.2 0.2
+:volu lung(S) ELLIPTICALTUBE 160 86 100 G4_LUNG
+:color lung(S) 0.9 0.2 0.2
 
 :volu HPGe(S) TUBE 0 3*cm 2*cm G4_Ge
 :color HPGe(S) 0.5 0.5 0.5
 
-:volu collimator TUBE 2 9*cm 4*cm G4_Pb
-:color collimator 0.3 0.3 0.3
-
 :rotm r000 0 0 0
 :rotm rx90 90 0 0
+:rotm rz30 0 0 -30
 
 :place room -10 world r000 0 0 0
-:place chest 3 room r000 -85 -116 0
-:place ribs 2 chest r000 0 0 0
-:place lung 1 ribs r000 0 0 0
+:place chest(S) 3 room rz30 -70 -130 0
+:place ribs(S) 2 chest(S) r000 0 0 0
+:place lung(S) 1 ribs(S) r000 0 0 0
 :place HPGe(S) 4 room rx90 0 20 0

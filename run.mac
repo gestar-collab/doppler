@@ -9,19 +9,20 @@
 
 /gps/particle gamma
 /gps/energy 113 keV
-/gps/position 0 0 -150 mm
+/gps/position 10 -20 0 cm
 /gps/ang/type iso
-# beam spot: 1 mm / source location: 150 mm
-/gps/ang/maxtheta 0.007 rad
-/gps/direction 0 0 1
+# beam spot: 1 mm / source location: 120 mm
+/gps/ang/maxtheta 0.008 rad
+/gps/ang/rot1 1 1 0
+/gps/ang/rot2 0 0 1
 
 /control/ifInteractive vis.mac
 
-/analysis/setFileName g113keV.root
+/analysis/setFileName g113keVchest.root
 
 /run/verbose 1
 /random/setSeeds 1234 82357 12374 14763 5479
 /run/printProgress 1000000
 
-/control/doifInteractive /run/beamOn 10
+/control/doifInteractive /run/beamOn 50
 /control/doifBatch /run/beamOn 10000000
