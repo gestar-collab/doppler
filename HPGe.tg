@@ -1,0 +1,14 @@
+:volu world BOX 200 200 200 G4_Galactic
+:vis world OFF
+
+:volu room BOX 180 180 180 G4_AIR
+:vis room OFF
+
+:volu HPGe(S) TUBE 0 3*cm 2*cm G4_Ge
+:color HPGe(S) 0.5 0.5 0.5
+
+:rotm r000 0 0 0
+
+:place room -10 world r000 0 0 0
+:place HPGe(S) 1 room r000 0 0 0
+

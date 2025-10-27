@@ -1,0 +1,25 @@
+/process/em/verbose 0
+/process/had/verbose 0
+
+/geometry/source HPGe.tg
+
+/run/initialize
+
+/gps/particle gamma
+/gps/energy 662 keV
+/gps/position 0 0 10 cm
+
+/control/ifInteractive vis.mac
+
+/control/doifBatch /analysis/setFileName g662keV2HPGeLivermore.root
+
+/run/verbose 1
+/random/setSeeds 1234 82357 12374 14763 5479
+/run/printProgress 100000
+
+/control/doifInteractive /tracking/verbose 2
+/control/doifInteractive /run/beamOn 2
+/control/doifInteractive /tracking/verbose 0
+/control/doifInteractive /run/beamOn 50
+/control/doifBatch /run/beamOn 1000000
+
